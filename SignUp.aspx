@@ -79,14 +79,14 @@
             <hr />
             <label class="col-xs-11">UserName:</label>
             <div class="col-xs-11">
-            <asp:TextBox ID="txtUname" runat="server"  placeholder="Enter Your UserName"></asp:TextBox>
+            <asp:TextBox id="TextUserName" runat="server"  placeholder="Enter Your UserName"></asp:TextBox>
             
             </div>
             
 
             <label class="col-xs-11">Password:</label>
             <div class="col-xs-11">
-            <asp:TextBox  runat="server" CssClass="form-control" placeholder="Enter Your Password"></asp:TextBox>
+            <asp:TextBox ID="textPassowrd" runat="server" CssClass="form-control" placeholder="Enter Your Password"></asp:TextBox>
             </div>
             
 

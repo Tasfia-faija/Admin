@@ -8,7 +8,7 @@ using System.Data;
 using System.Data.SqlClient;
 using System.Configuration;
 using System.Web.UI.HtmlControls;
-
+//koi somossa okhane nao
 namespace WebApplication5
 
 {
@@ -16,11 +16,6 @@ namespace WebApplication5
     public partial class SignUp : System.Web.UI.Page
     {
 
-        protected global::System.Web.UI.WebControls.TextBox txtUname;
-        protected global::System.Web.UI.WebControls.TextBox txtPass;
-        protected global::System.Web.UI.WebControls.TextBox txtEmail;
-        protected global::System.Web.UI.WebControls.TextBox txtName;
-        protected global::System.Web.UI.WebControls.TextBox txtCPass;
         
 
         protected void Page_Load(object sender, EventArgs e)
@@ -30,15 +25,16 @@ namespace WebApplication5
 
         protected void txtsignup_Click(object sender, EventArgs e)
         {
-            //if (isformvalid())
-           // {
+            TextUserName.Text
+            if (isformvalid())
+            {
                
                 
                     using (SqlConnection con = new SqlConnection(ConfigurationManager.ConnectionStrings["MedicineDB"].ConnectionString))
                     {
                         con.Open();
-                Response.Write(txtUname.Text);
-                SqlCommand cmd = new SqlCommand("insert into Users(Username,Password,Email,Name)values ('" + txtUname.Text + "','" + txtPass.Text + "','" + txtEmail.Text + "','" + txtName.Text + "')", con);
+                Response.Write(TextUser.Text);
+                SqlCommand cmd = new SqlCommand("insert into Users(Username,Password,Email,Name)values ('" + textUserName.Text + "','" + txtPass.Text + "','" + txtEmail.Text + "','" + txtName.Text + "')", con);
                         cmd.ExecuteNonQuery();
 
                         Response.Write("<script>alert('Registration Successfully Done');</script>");
@@ -48,14 +44,14 @@ namespace WebApplication5
 
                 
 
-           // }
+            }
         }
 
-/*private bool isformvalid()
+private bool isformvalid()
         {
             
             
-                if (txtUname.Text == " ")
+                if (textUserName.Text == " ")
                 {
                     Response.Write("<script>alert('Username not valid');</script>");
                     return false;
@@ -82,7 +78,7 @@ namespace WebApplication5
                 }
 
                 return true;
-            } */
+            } 
         
         
         
